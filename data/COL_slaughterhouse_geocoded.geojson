@@ -1,0 +1,383 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.440918,6.6113434 ]
+    },
+    "properties": {
+    "Slaughterhouse":"Colanta Frigorifico",
+    "Defor_2010":30.3,
+    "Defor_2011":32.53,
+    "Defor_2012":33.59,
+    "Defor_2013":34.45,
+    "Defor_2014":35.62,
+    "Defor_2015":36.83,
+    "Defor_2016":38,
+    "Defor_2017":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.6571503,8.8698158 ]
+    },
+    "properties": {
+    "Slaughterhouse":"Red Carnica",
+    "Defor_2010":7.33,
+    "Defor_2011":9.73,
+    "Defor_2012":12.41,
+    "Defor_2013":15.73,
+    "Defor_2014":18.67,
+    "Defor_2015":21.94,
+    "Defor_2016":25.7,
+    "Defor_2017":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.7286682,6.7157059 ]
+    },
+    "properties": {
+    "Slaughterhouse":"Planta de Sacrificio Animal",
+    "Defor_2010":6.85,
+    "Defor_2011":7.82,
+    "Defor_2012":10.45,
+    "Defor_2013":13.96,
+    "Defor_2014":16.76,
+    "Defor_2015":19.98,
+    "Defor_2016":23.74,
+    "Defor_2017":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.6371078,4.1403508 ]
+    },
+    "properties": {
+    "Slaughterhouse":"Meats La Costela",
+    "Defor_2010":13.39,
+    "Defor_2011":14.78,
+    "Defor_2012":15.91,
+    "Defor_2013":17.01,
+    "Defor_2014":18.29,
+    "Defor_2015":19.66,
+    "Defor_2016":21.07,
+    "Defor_2017":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.132019,7.0541167 ]
+    },
+    "properties": {
+    "Slaughterhouse":"Frigorifico Rio Frio",
+    "Defor_2010":10.39,
+    "Defor_2011":12.44,
+    "Defor_2012":14.31,
+    "Defor_2013":16.37,
+    "Defor_2014":17.89,
+    "Defor_2015":19.42,
+    "Defor_2016":21.04,
+    "Defor_2017":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.0181427,6.5872817 ]
+    },
+    "properties": {
+    "Slaughterhouse":"Frigonordeste SAS",
+    "Defor_2010":14.28,
+    "Defor_2011":15.64,
+    "Defor_2012":17.02,
+    "Defor_2013":18.46,
+    "Defor_2014":19.28,
+    "Defor_2015":20.13,
+    "Defor_2016":21,
+    "Defor_2017":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.7389679,4.8224883 ]
+    },
+    "properties": {
+    "Slaughterhouse":"Matadero Municipal - FRIGOTUN SAT LTDA",
+    "Defor_2010":6.02,
+    "Defor_2011":6.79,
+    "Defor_2012":8.31,
+    "Defor_2013":10.16,
+    "Defor_2014":12.81,
+    "Defor_2015":16.19,
+    "Defor_2016":20.38,
+    "Defor_2017":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.1281738,7.1595316 ]
+    },
+    "properties": {
+    "Slaughterhouse":"Frigorifico Vijagual SA",
+    "Defor_2010":17.58,
+    "Defor_2011":18.39,
+    "Defor_2012":18.94,
+    "Defor_2013":18.66,
+    "Defor_2014":18.76,
+    "Defor_2015":19.49,
+    "Defor_2016":20.24,
+    "Defor_2017":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.472229,7.8152409 ]
+    },
+    "properties": {
+    "Slaughterhouse":"Frigorifico la frontera",
+    "Defor_2010":8.33,
+    "Defor_2011":9.89,
+    "Defor_2012":11.96,
+    "Defor_2013":13.63,
+    "Defor_2014":15.17,
+    "Defor_2015":16.9,
+    "Defor_2016":18.77,
+    "Defor_2017":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.6908493,5.1464171 ]
+    },
+    "properties": {
+    "Slaughterhouse":"Planta de Sacrificio Choconta",
+    "Defor_2010":15.83,
+    "Defor_2011":16.09,
+    "Defor_2012":16.94,
+    "Defor_2013":17.81,
+    "Defor_2014":18.09,
+    "Defor_2015":18.37,
+    "Defor_2016":18.59,
+    "Defor_2017":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.8893051,10.9011402 ]
+    },
+    "properties": {
+    "Slaughterhouse":"Matadero Camaguey",
+    "Defor_2010":4.66,
+    "Defor_2011":6.62,
+    "Defor_2012":8.33,
+    "Defor_2013":10.28,
+    "Defor_2014":12.33,
+    "Defor_2015":14.73,
+    "Defor_2016":17.6,
+    "Defor_2017":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.1514359,4.5950727 ]
+    },
+    "properties": {
+    "Slaughterhouse":"Refrigerator Guadalupe SAS",
+    "Defor_2010":6.03,
+    "Defor_2011":7.15,
+    "Defor_2012":8.47,
+    "Defor_2013":10.03,
+    "Defor_2014":11.89,
+    "Defor_2015":14.08,
+    "Defor_2016":16.62,
+    "Defor_2017":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.0862274,6.9134226 ]
+    },
+    "properties": {
+    "Slaughterhouse":"Planta de sacrificio de ganado",
+    "Defor_2010":9.96,
+    "Defor_2011":10.51,
+    "Defor_2012":11.39,
+    "Defor_2013":12.41,
+    "Defor_2014":13.33,
+    "Defor_2015":14.25,
+    "Defor_2016":15.18,
+    "Defor_2017":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.1847,4.7632632 ]
+    },
+    "properties": {
+    "Slaughterhouse":"Frigorifico Metropolitano",
+    "Defor_2010":9.95,
+    "Defor_2011":10.89,
+    "Defor_2012":11.92,
+    "Defor_2013":13.06,
+    "Defor_2014":13.7,
+    "Defor_2015":14.28,
+    "Defor_2016":14.86,
+    "Defor_2017":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.4937363,6.3596082 ]
+    },
+    "properties": {
+    "Slaughterhouse":"Matadero municipal Copacabana",
+    "Defor_2010":5.41,
+    "Defor_2011":6.55,
+    "Defor_2012":7.67,
+    "Defor_2013":8.74,
+    "Defor_2014":10.51,
+    "Defor_2015":12.7,
+    "Defor_2016":14.16,
+    "Defor_2017":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.8067169,10.860796 ]
+    },
+    "properties": {
+    "Slaughterhouse":"FrigoEcol LTDA",
+    "Defor_2010":null,
+    "Defor_2011":null,
+    "Defor_2012":null,
+    "Defor_2013":null,
+    "Defor_2014":null,
+    "Defor_2015":null,
+    "Defor_2016":null,
+    "Defor_2017":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.7222519,7.0298958 ]
+    },
+    "properties": {
+    "Slaughterhouse":"FrigoMatadero Arauca",
+    "Defor_2010":null,
+    "Defor_2011":null,
+    "Defor_2012":null,
+    "Defor_2013":null,
+    "Defor_2014":null,
+    "Defor_2015":null,
+    "Defor_2016":null,
+    "Defor_2017":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.4848785,5.0623617 ]
+    },
+    "properties": {
+    "Slaughterhouse":"Centro de Sacrifico Manizales",
+    "Defor_2010":null,
+    "Defor_2011":null,
+    "Defor_2012":null,
+    "Defor_2013":null,
+    "Defor_2014":null,
+    "Defor_2015":null,
+    "Defor_2016":null,
+    "Defor_2017":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.5623703,6.3009419 ]
+    },
+    "properties": {
+    "Slaughterhouse":"Feria de Ganados de Medellin",
+    "Defor_2010":null,
+    "Defor_2011":null,
+    "Defor_2012":null,
+    "Defor_2013":null,
+    "Defor_2014":null,
+    "Defor_2015":null,
+    "Defor_2016":null,
+    "Defor_2017":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.2984772,3.8480804 ]
+    },
+    "properties": {
+    "Slaughterhouse":"Frigorivalle SAS",
+    "Defor_2010":null,
+    "Defor_2011":null,
+    "Defor_2012":null,
+    "Defor_2013":null,
+    "Defor_2014":null,
+    "Defor_2015":null,
+    "Defor_2016":null,
+    "Defor_2017":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.1879654,4.0937414 ]
+    },
+    "properties": {
+    "Slaughterhouse":"Frigo Timana SAS",
+    "Defor_2010":null,
+    "Defor_2011":null,
+    "Defor_2012":null,
+    "Defor_2013":null,
+    "Defor_2014":null,
+    "Defor_2015":null,
+    "Defor_2016":null,
+    "Defor_2017":""
+    }
+  }
+]
+}
