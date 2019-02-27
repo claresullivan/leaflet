@@ -1,5 +1,14 @@
-<<<<<<< HEAD
-//My Lab 1
+//Leaflet Lab 2
+//Author: Clare Sullivan, adapted from Module lessons
+///GOAL: Proportional symbols representing attribute values of mapped features
+//STEPS:
+//1. Create the Leaflet map--done (in createMap())
+//2. Import GeoJSON data--done (in getData())
+//3. Add circle markers for point features to the map--done (in AJAX callback)
+//4. Determine which attribute to visualize with proportional symbols
+//5. For each feature, determine its value for the selected attribute
+//6. Give each feature's circle marker a radius based on its attribute value
+
 
 
 //initialize map and use coordinates to set the view
@@ -23,16 +32,14 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
     getData(map);
 };
 
+//Step 3. Add circle markers for point features
+function createPropSymbols(data, map){
+    //Assign which attribute to visualize with proportional symbols
+    var attribute = "Defor_2014";
 
-//function to retrieve the data and place it on the map
-function getData(map){
-    //load the data
-    $.ajax("data/COL_slaughterhouse_geocoded.geojson", {
-        dataType: "json",
-        success: function(response){
-            //create marker options
+   //create marker options
             var geojsonMarkerOptions = {
-                radius: 8,
+                radius: ,
                 fillColor: "#ff7800",
                 color: "#000",
                 weight: 1,
@@ -40,136 +47,43 @@ function getData(map){
                 fillOpacity: 0.8
             };
 
+            //calculate the radius of each proportional symbol
+function calcPropRadius(attValue) {
+    //scale factor to adjust symbol size evenly
+    var scaleFactor = 50;
+    //area based on attribute value and scale factor
+    var area = attValue * scaleFactor;
+    //radius calculated based on area
+    var radius = Math.sqrt(area/Math.PI);
+
+    return radius;
+};
+
             //create a Leaflet GeoJSON layer and add it to the map
            L.geoJson(response, {
                 pointToLayer: function (feature, latlng){
+                        //Step 5: For each feature, determine its value for the selected attribute
+                var attValue = Number(feature.properties[attribute]);
+                     //examine the attribute value to check that it is correct
+            //console.log(feature.properties, attValue);
+            //Give each feature's circle marker a radius based on its attribute value
+            geojsonMarkerOptions.radius = calcPropRadius(attValue);
                     return L.circleMarker(latlng, geojsonMarkerOptions);
                 }
             }).addTo(map);
         }
+        
+//function to retrieve the data and place it on the map
+function getData(map){
+    //load the data
+    $.ajax("data/COL_slaughterhouse_geocoded.geojson", {
+        dataType: "json",
+        success: function(response){
+         //call function to create proportional symbols
+         createPropSymbols(response, map);           
+
+
     });
 };
 
 $(document).ready(createMap);
-=======
-var mydiv = document.getElementById("mydiv");
-mydiv.innerHTML = "My Table";
-
-
-//jQuery version of creating a table
-//call the initialize function when the window has loaded
-window.onload = initialize();
-
-
-//initialize function called when the script loads
-function initialize(){
-    cities();
-};
-
-//function to create a table with cities and their populations
-function cities(){
-    //define two arrays for cities and population in Colombia (the top 4 by population)
-    var cityPop = [
-        { 
-            city: 'Bogotá',
-            population: 7963379
-        },
-        {
-            city: 'Medellín',
-            population: 2457680
-        },
-        {
-            city: 'Cali',
-            population: 2358302
-        },
-        {
-            city: 'Baranquilla',
-            population: 1219382
-        }
-    ];
-
-    //append the table element to the div
-    $("#mydiv").append("<table>");
-    //append a header row to the table
-    $("table").append("<tr>");
-
-    //add the "City" and "Population" columns to the header row
-    $("tr").append("<th>City</th><th>Population</th>");
-
-    //loop to add a new row for each city
-    for (var i = 0; i < cityPop.length; i++){
-        
-        //assign longer html strings to a variable
-        var rowHtml = "<tr><td>" + cityPop[i].city + "</td><td>" + cityPop[i].population + "</td></tr>";
-        //add the row's html string to the table
-        $("table").append(rowHtml);
-    };
-      //call new functions
-      addColumns(cityPop);
-      addEvents();
-};
-
-//call the initialize function when the document has loaded
-//$(document).ready(initialize);
-
-//create function to add columns to cityPop
-function addColumns(cityPop){
-    //loop to add a new column for each city
-    $('tr').each(function(i,v) {
-        //conditional statement to define city size arrays
-        if (i == 0){
-            //add the title to the header row
-            $(this).append('<th>City Size</th>');
-            //three rule statements defining size thresholds
-        } else {
-
-            var citySize;
-
-            if (cityPop[i-1].population < 100000){
-                citySize = 'Small';
-
-            } else if (cityPop[i-1].population < 500000){
-                citysize = 'Medium';
-
-            } else {
-                citySize = 'Large';
-            };
-            //add the row's html string to the table
-            $(this).append('<td>' + citySize + '</td>');
-        };
-    });
-};
-
-//create function to add color and mouseover to the table
-function addEvents($this){
-    //Trigger an event when viewer "mousesover" the table
-    $('table').mouseover(function(){
-        //define string variable with a CSS color code using loop
-        var color = "rgb(";
-        //Loop to generate three random numbers to feed into .css()
-        for (var i=0; i<3; i++){
-            //Generate a random number and round it to an interger, multiply by 255 to conform to RGB color model
-            var random = Math.round(Math.random() * 255);
-
-            color += random;
-
-            if (i<2){
-                color += ",";
-            
-            } else {
-                color += ")";
-        };
-        //set the value of the element using CSS styles, changing text color by calling variable color
-        $(this).css('color', color);
-    };
-    //create alert function in response to clicking on the box
-    function clickme(){
-        //Display an alert box
-        alert('Hey, you clicked me!');
-    };
-    //add event listener
-    $('table').on('click', clickme);
-});
-};
-
->>>>>>> origin/master
