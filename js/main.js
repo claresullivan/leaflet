@@ -33,21 +33,43 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 };
 
 //Step 3. Add circle markers for point features
-function createPropSymbols(data, map){
+function pointToLayer(feature, latlng){
     //Assign which attribute to visualize with proportional symbols
     var attribute = "Defor_2014";
 
-   //create marker options
-            var geojsonMarkerOptions = {
-                radius: ,
+//create marker options
+            var options = {
                 fillColor: "#ff7800",
                 color: "#000",
                 weight: 1,
                 opacity: 1,
                 fillOpacity: 0.8
             };
+    //For each feature, determine its value for the selected attribute
+    var attValue = Number(feature.properties[attribute]);
 
-            //calculate the radius of each proportional symbol
+    //Give each feature's circle marker a radius based on its attribute value
+    options.radius = calcPropRadius(attValue);
+
+    //create circle marker layer
+    var layer = L.circleMarker(latlng, options);
+
+    //build popup content string
+       //build popup content string starting with city...Example 2.1 line 24
+    var popupContent = "<p><b>Slaughterhouse:</b> " + feature.properties.Slaughterhouse + "</p>";
+
+    //add formatted attribute to popup content string
+    var year = attribute.split("_")[1];
+    popupContent += "<p><b>Deforestation in the supplyshed during  " + year + ":</b> " + feature.properties[attribute] + " square kilometers</p>";
+
+    //bind the popup to the circle marker
+    layer.bindPopup(popupContent);
+
+    //return the circle marker to the L.geoJson pointToLayer option
+    return layer;
+};
+
+//calculate the radius of each proportional symbol
 function calcPropRadius(attValue) {
     //scale factor to adjust symbol size evenly
     var scaleFactor = 50;
@@ -59,30 +81,58 @@ function calcPropRadius(attValue) {
     return radius;
 };
 
-            //create a Leaflet GeoJSON layer and add it to the map
-           L.geoJson(response, {
-                pointToLayer: function (feature, latlng){
-                        //Step 5: For each feature, determine its value for the selected attribute
-                var attValue = Number(feature.properties[attribute]);
-                     //examine the attribute value to check that it is correct
-            //console.log(feature.properties, attValue);
-            //Give each feature's circle marker a radius based on its attribute value
-            geojsonMarkerOptions.radius = calcPropRadius(attValue);
-                    return L.circleMarker(latlng, geojsonMarkerOptions);
-                }
-            }).addTo(map);
-        }
-        
+//Add circle markers for point features to the map
+function createPropSymbols(data, map){
+    //create a Leaflet GeoJSON layer and add it to the map
+    L.geoJson(data, {
+        pointToLayer: pointToLayer
+    }).addTo(map);
+};
+
+//GOAL: Allow the user to sequence through the attributes and resymbolize the map 
+//   according to each attribute
+//STEPS:
+//1. Create slider widget
+//2. Create skip buttons
+//3. Create an array of the sequential attributes to keep track of their order
+//4. Assign the current attribute based on the index of the attributes array
+//5. Listen for user input via affordances
+//6. For a forward step through the sequence, increment the attributes array index; 
+//   for a reverse step, decrement the attributes array index
+//7. At either end of the sequence, return to the opposite end of the seqence on the next step
+//   (wrap around)
+//8. Update the slider position based on the new index
+//9. Reassign the current attribute based on the new attributes array index
+//10. Resize proportional symbols according to each feature's value for the new attribute
+
+//Step 1: Create new sequence controls
+function createSequenceControls(map){
+    //create range input element (slider)
+    $('#panel').append('<input class="range-slider" type="range">');
+};
+
+ //set slider attributes
+    $('.range-slider').attr({
+        max: 35,
+        min: 0,
+        value: 0,
+        step: 1
+    });
+
+        //below Example 3.4...add skip buttons
+    $('#panel').append('<button class="skip" id="reverse">Reverse</button>');
+    $('#panel').append('<button class="skip" id="forward">Skip</button>');
+
 //function to retrieve the data and place it on the map
 function getData(map){
     //load the data
     $.ajax("data/COL_slaughterhouse_geocoded.geojson", {
         dataType: "json",
         success: function(response){
-         //call function to create proportional symbols
-         createPropSymbols(response, map);           
-
-
+            //call function to create proportional symbols and create sequence controls
+            createPropSymbols(response, map);
+            createSequenceControls(map, attributes);
+        }
     });
 };
 
